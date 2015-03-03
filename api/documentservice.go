@@ -1,9 +1,9 @@
 package api
 
 import (
-	"github.com/devinshively/gogonic-archetype/database"
-	"github.com/devinshively/gogonic-archetype/database/postgres"
-	"github.com/devinshively/gogonic-archetype/model"
+	"github.com/devinshively/go-gonic-archetype/database"
+	"github.com/devinshively/go-gonic-archetype/database/postgres"
+	"github.com/devinshively/go-gonic-archetype/model"
     "github.com/gin-gonic/gin"
 )
 

@@ -1,6 +1,6 @@
 package database
 
-import "github.com/devinshively/gogonic-archetype/model"
+import "github.com/devinshively/go-gonic-archetype/model"
 
 type DocumentDataStore interface {
 	CreateOrUpdate(doc *model.Document) error

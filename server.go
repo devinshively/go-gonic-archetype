@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/devinshively/gogonic-archetype/api"
+	"github.com/devinshively/go-gonic-archetype/api"
     "github.com/gin-gonic/gin"
     "github.com/gin-gonic/contrib/static"
 	"runtime"
