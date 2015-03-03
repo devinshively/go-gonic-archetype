@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/devinshively/go-gonic-archetype/api"
-    "github.com/gin-gonic/gin"
-    "github.com/gin-gonic/contrib/static"
-	"runtime"
+	"github.com/gin-gonic/contrib/static"
+	"github.com/gin-gonic/gin"
 	"os"
+	"runtime"
 )
 
 func main() {
@@ -24,5 +24,5 @@ func main() {
 	if port == "" {
 		port = "3000"
 	}
-	r.Run(":"+port)
+	r.Run(":" + port)
 }

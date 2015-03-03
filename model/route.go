@@ -1,7 +1,7 @@
 package model
 
 import (
-    "github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 type Route struct {

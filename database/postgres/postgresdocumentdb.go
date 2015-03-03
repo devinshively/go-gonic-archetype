@@ -2,8 +2,8 @@ package postgres
 
 import (
 	"github.com/devinshively/go-gonic-archetype/model"
-	_ "github.com/lib/pq"
 	"github.com/jmoiron/sqlx"
+	_ "github.com/lib/pq"
 	"log"
 )
 

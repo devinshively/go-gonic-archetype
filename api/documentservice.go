@@ -4,7 +4,7 @@ import (
 	"github.com/devinshively/go-gonic-archetype/database"
 	"github.com/devinshively/go-gonic-archetype/database/postgres"
 	"github.com/devinshively/go-gonic-archetype/model"
-    "github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 var DocumentRoutes []model.Route
@@ -39,7 +39,7 @@ func init() {
 func getAllDocumentsHandler(c *gin.Context) {
 	docs, err := db.GetAll()
 	if err != nil {
-		c.JSON(500, gin.H{"error":err.Error()})
+		c.JSON(500, gin.H{"error": err.Error()})
 	} else {
 		c.JSON(200, docs)
 	}
@@ -50,7 +50,7 @@ func createOrUpdateDocumentHandler(c *gin.Context) {
 	c.Bind(&doc)
 
 	if err := db.CreateOrUpdate(&doc); err != nil {
-		c.JSON(500, gin.H{"error":err.Error()})
+		c.JSON(500, gin.H{"error": err.Error()})
 	} else {
 		c.JSON(200, doc)
 	}
@@ -60,7 +60,7 @@ func getDocumentHandler(c *gin.Context) {
 	id := c.Params.ByName("id")
 	doc, err := db.Get(id)
 	if err != nil {
-		c.JSON(500, gin.H{"error":err.Error()})
+		c.JSON(500, gin.H{"error": err.Error()})
 	} else {
 		c.JSON(200, doc)
 	}
@@ -69,8 +69,8 @@ func getDocumentHandler(c *gin.Context) {
 func deleteDocumentHandler(c *gin.Context) {
 	id := c.Params.ByName("id")
 	if err := db.Delete(id); err != nil {
-		c.JSON(500, gin.H{"error":err.Error()})
+		c.JSON(500, gin.H{"error": err.Error()})
 	} else {
-		c.JSON(204,nil)
+		c.JSON(204, nil)
 	}
 }
